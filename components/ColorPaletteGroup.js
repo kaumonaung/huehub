@@ -10,10 +10,9 @@ export default function ColorPaletteGroup(props) {
       <span className="mt-5 flex sm:mx-auto">
         {colors &&
           colors.map((_, i) => (
-            <div className="flex flex-1 flex-col">
+            <div className="flex flex-1 flex-col" key={i}>
               <button
                 type="button"
-                key={i}
                 className={classNames(
                   i === 0 && 'rounded-l-md',
                   i === colors.length - 1 && 'rounded-r-md',
